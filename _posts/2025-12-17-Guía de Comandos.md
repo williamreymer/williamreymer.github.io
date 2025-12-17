@@ -3,12 +3,11 @@ title: Guía de Comandos
 date: 2025-12-17 12:10:00 +/-TTTT
 categories: [Comandos Pentesting]
 tags: [comandos,linux, windows, herramientas, tools, pentesting]     # TAG names should always be lowercase
-
+image:
+    path: /assets/img/headers/portada_comando.webp
+    lqip: data:image/UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJZQC+SCFRD+HzeeAA/uvgZrGt1IwtseWxTbowXyhWyx6lGqKRqNv4Xy+KSAAA
 description: Guía de comandos para Pentesting
 ---
-
-![img-description](/assets/img/comandos/portada.jpg)
-_Image Caption_
 
 ## Diccionarios Comunes
 

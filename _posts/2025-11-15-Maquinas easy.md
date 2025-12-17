@@ -3,12 +3,11 @@ title: Pickle Rick
 date: 2025-11-15 17:51:00 +/-TTTT
 categories: [Máquinas Tryhackme,easy]
 tags: [CTF,tryhackme]     # TAG names should always be lowercase
-
+image:
+    path: /assets/img/headers/portada_rick.webp
+    lqip: data:image/UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJbACdMoABVf8Lky2C0KUAAP21xaHrnPKZi2SdDfMvwqlral5kvcVWozleUSCk6uY427i0lsjVJmg+BqoRz2H5GWMkko3dd8qE2T6unEXx7iin8eCEK2qeLnBnI7IaYfR8DIAA
 description: Resolución de la máquina Pickle Rick
 ---
-
-![img-description](/assets/img/pickle_rick/picke_rick.jpeg)
-_Image Caption_
 
 ## Descripción
 
